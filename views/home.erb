@@ -1,0 +1,16 @@
+<h1>Hello and welcome</h1>
+<h2>How are you ?</h2>
+<p>This is some content</p>
+
+<ul>
+<%#= %> <!-- Ruby to print in the page -->
+<%# %> <!-- Ruby to execute -->
+  <% @tasks.each do |task| %>
+  <li>
+    [<%= task.done? ? 'X' : ' ' %>]
+    <%= task.title %>
+  </li>
+  <% end %>
+</ul>
+
+<a href="/new_task">Add a new task</a>

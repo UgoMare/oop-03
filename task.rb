@@ -1,9 +1,11 @@
 class Task
   #STATES
-  attr_reader :title
-  def initialize(title)
+  attr_reader :title, :done
+  #Task.new('Do laundry') -> done is false
+  #Task.new('Do laundry', true) -> done is true
+  def initialize(title, done = false)
     @title = title
-    @done = false
+    @done = done
   end
 
   #BEHAVIOR
